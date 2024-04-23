@@ -14,11 +14,6 @@ func main() {
 	flag.Parse()
 	gin.SetMode(gin.DebugMode)
 	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Static("/static", staticRoot)
+	r.Static("/", staticRoot)
 	r.Run(port)
 }
