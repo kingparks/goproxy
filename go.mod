@@ -1,6 +1,6 @@
 module github.com/kingparks/goproxy
 
-go 1.20.3
+go 1.20
 
 require github.com/gin-gonic/gin v1.9.1
 
