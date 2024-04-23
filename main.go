@@ -11,8 +11,8 @@ var port string       //端口
 func main() {
 	flag.StringVar(&staticRoot, "s", "", "静态文件根目录")
 	flag.StringVar(&port, "p", "", "端口")
-
-	gin.SetMode(gin.ReleaseMode)
+	flag.Parse()
+	gin.SetMode(gin.DebugMode)
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
